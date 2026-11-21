@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "Paris2024";
+  src:
+    url("../../fonts/Paris2024/Paris2024-Variable.ttf")
+      format("truetype-variations"),
+    url("../../fonts/Paris2024/Paris2024-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Paris2024", Arial, Helvetica, sans-serif !important;
+  color: #f5f5f5;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  padding: 24px 18px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin: 28px 0 24px;
+  font-size: 27px;
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 21px;
+}
+
+p {
+  line-height: 1.45;
+}
+
+.back-link {
+  align-self: flex-start;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu,
+.list,
+.medal-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.button,
+.list-item,
+.medal-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 3px solid #f5f5f5;
+  border-radius: 14px;
+  background: #ffffff34;
+  color: #f5f5f5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button,
+.list-item {
+  width: 100%;
+  max-width: 340px;
+  min-height: 54px;
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.medal-card {
+  width: 90%;
+  padding: 5px 7px;
+}
+
+.button:active,
+.list-item:active,
+.medal-card:active {
+  background: #f0f0f0;
+}
+
+.list-item img {
+  width: 34px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.list-item .discipline-image {
+  width: 36px;
+  height: 36px;
+}
+
+.medal-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.medal-table {
+  border-collapse: collapse;
+  color: #ffffff;
+  text-align: center;
+  background: transparent;
+  transform: scale(0.6);
+}
+
+.medal-table th,
+.medal-table td {
+  padding: 14px 36px;
+  border-left: 2px solid rgba(255, 255, 255, 0.85);
+  border-right: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.medal-table th {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+  padding-bottom: 18px;
+}
+
+.medal-table td {
+  font-size: 26px;
+  font-weight: 400;
+  padding-top: 18px;
+}
+
+.country-heading,
+.discipline-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.country-heading img {
+  object-fit: contain;
+}
+
+.discipline-heading img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.medal-card strong {
+  font-size: 25px;
+}
+
+.total {
+  margin: 18px 0 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.error {
+  color: #b00020;
+}
+
+@media (max-width: 360px) {
+  .page {
+    padding-inline: 12px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.disciplines-page {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.disciplines-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.disciplines-list::-webkit-scrollbar {
+  display: none;
+}
+
+.countries-medal-table {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 24px;
+  border-collapse: collapse;
+  color: #ffffff;
+  background: transparent;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.countries-medal-table th,
+.countries-medal-table td {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.countries-medal-table th {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.countries-medal-table td {
+  padding: 13px 16px;
+  font-size: 17px;
+}
+
+.countries-medal-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.countries-medal-table th:first-child,
+.countries-medal-table td:first-child {
+  width: 65%;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.countries-medal-table th:first-child {
+  text-align: center;
+}
+
+.countries-medal-table td:first-child {
+  text-align: left;
+  padding-left: 14px;
+}
+
+.countries-medal-table th:last-child,
+.countries-medal-table td:last-child {
+  width: 35%;
+  text-align: center;
+}
+
+.country-table-link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  transition: opacity 0.2s ease;
+}
+
+.country-table-link:active,
+.country-table-link:hover {
+  opacity: 0.75;
+}
+
+.discipline-medal-table {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 24px;
+  transform: none;
+}
+
+.discipline-medal-table th,
+.discipline-medal-table td {
+  width: 25%;
+  padding: 12px 6px;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.discipline-medal-table th {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 14px;
+}
+
+.discipline-medal-table td {
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 14px;
+}
